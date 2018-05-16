@@ -1,0 +1,216 @@
+.stm_posttimeline_style_1 {
+    position: relative;
+    padding: 0 30px 30px;
+    margin: 70px -30px -30px;
+    overflow: hidden;
+    .stm_posttimeline {
+        &__date_inner {
+            color: #fff;
+        }
+        &__single {
+            margin-bottom: 70px;
+            display: flex;
+            &:first-child {
+                .stm_posttimeline__date,
+                .stm_posttimeline__icon {
+                    margin-top: 0;
+                }
+                .stm_posttimeline__post:after {
+                    top: 26px;
+                }
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                .stm_posttimeline__icon {
+                    margin: 15px 35px 0 25px;
+                }
+                .stm_posttimeline__post {
+                    &:after {
+                        left: -7px;
+                        right: auto;
+                    }
+                }
+            }
+        }
+        &__posts {
+            width: 43%;
+        }
+        &__post {
+            display: block;
+            position: relative;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+            border-radius: 5px;
+            line-height: 28px;
+            font-weight: 300;
+            &_inner {
+                position: relative;
+                padding: 37px 35px 40px 35px;
+                border-radius: 5px;
+                background-color: #fff;
+                z-index: 20;
+                color: $stm_base_color;
+                .mtc {
+                    margin-bottom: 15px;
+                    color: $stm_third_color;
+                    font-size: 22px;
+                    line-height: 24px;
+                }
+            }
+            &:after {
+                @include pseudo();
+                position: absolute;
+                top: 40px;
+                right: -7px;
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                transform: rotate(45deg);
+                box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+            span {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+            &:first-child:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__icon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            margin: 15px 25px 0 40px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 34px;
+            color: #fff;
+            background-size: cover;
+            background-position: 50% 50%;
+            transition: .3s ease;
+            .stmicon-zzz {
+                &:before {
+                    @include stmicon($stm-btc_invest);
+                    content: "\e972";
+                }
+            }
+            .stmicon-zzz,
+            .stmicon-startup_back {
+                position: relative;
+                top: 3px;
+                left: -1px;
+            }
+            .stmicon-zzz {
+                top: 2px;
+                left: 1px;
+            }
+            svg {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                height: 3485px;
+                z-index: -1;
+                line {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+        &__date {
+            margin: 12px 0 0;
+            &_inner {
+                span {
+                    display: block;
+                    transition: .3s ease;
+                    &.month {
+                        margin: -2px 0 -4px;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                    }
+                    &.year {
+                        font-size: 56px;
+                        line-height: 56px;
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint(1200px) {
+        .stm_posttimeline__single{
+            &:nth-child(even) {
+                .stm_posttimeline__icon {
+                    margin-left: 18px;
+                    margin-right: 25px;
+                }
+            }
+            .stm_posttimeline__icon {
+                margin-left: 25px;
+                margin-right: 15px;
+            }
+        }
+    }
+    @include breakpoint(900px) {
+        .stm_posttimeline__icon svg {
+            display: none;
+        }
+        .stm_posttimeline__single{
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto 17px;
+            &:nth-child(even) {
+                flex-direction: row;
+                .stm_posttimeline__icon {
+                    margin-right: 0;
+                    //margin-right: 120px;
+                }
+            }
+            .stm_posttimeline__posts {
+                margin-top: 30px;
+                order: 3;
+                width: 100%;
+            }
+            .stm_posttimeline__icon {
+                order: 2;
+                margin-right: 0;
+                //margin-right: 130px;
+            }
+            .stm_posttimeline__date {
+                margin: 0 auto 0 0;
+                order: 0;
+                &_inner {
+                    position: relative;
+                    top: 6px;
+                }
+                span {
+                    &.month {
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .stm_posttimeline__post{
+                background: transparent;
+                box-shadow: none;
+                &_inner {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+                &:after {
+                    display: none !important;
+                    top: -7px !important;
+                    left: 50% !important;
+                    margin-left: -7px;
+                }
+            }
+        }
+    }
+}

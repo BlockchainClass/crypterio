@@ -1,0 +1,49 @@
+@import "pricing_plan";
+@import "countdown";
+
+[data-field="LOGO64"] {
+    display: none;
+}
+
+.pcw-box {
+    &.pcw-header {
+        background-color: #141414;
+        .pcw-field-PRICE,
+        .pcw-field-FROMSYMBOL {
+            color: #fff;
+        }
+    }
+}
+
+body {
+    .pcw-table.pcw-basic table {
+        margin: 50px 0 0;
+        background-color: #000;
+        border-color: #555555;
+        color: #fff;
+        tbody {
+            tr {
+                &:hover {
+                    background: transparent;
+                }
+                td {
+                    border-color: #555555;
+                }
+            }
+        }
+    }
+}
+
+.service_cost {
+    white-space: nowrap;
+}
+
+.fancybox-type-iframe {
+    .fancybox-skin {
+        padding: 0 !important;
+    }
+}
+
+.stm_post_title {
+    display: block;
+}

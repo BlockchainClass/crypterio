@@ -1,0 +1,338 @@
+.staff_list {
+    position: relative;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin: 0 0 30px;
+            padding: 0 0 30px;
+            border-bottom: 1px solid transparent;
+            @include cleaner();
+            &:last-child {
+                border: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .staff_image {
+                position: relative;
+                float: left;
+                margin: 0 30px 0 0;
+                max-width: 255px;
+                img {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                    transform: translateZ(0);
+                }
+            }
+            .staff_info {
+                overflow: hidden;
+                color: #fff;
+                h4 {
+                    padding: 4px 0 0;
+                    margin: 0 0 1px;
+                    a {
+                        color: $stm_base_color;
+                    }
+                }
+                .staff_department {
+                    font-family: Roboto Slab;
+                    font-weight: 500;
+                    margin: 0 0 16px;
+                    letter-spacing: -0.04em;
+                }
+                p {
+                    font-size: 13px;
+                    line-height: 18px;
+                    margin: 0 0 24px;
+                }
+                .button {
+                    background-color: $stm_secondary_color;
+                }
+            }
+        }
+    }
+    &.grid {
+        ul {
+            margin: 0 -15px;
+            font-size: 0;
+            li {
+                display: inline-block;
+                vertical-align: top;
+                width: 33%;
+                border: none;
+                margin: 0 0 47px;
+                padding: 0 15px;
+                font-size: 13px;
+                .staff_image {
+                    margin: 0 0 14px;
+                    float: none;
+                }
+                .staff_info {
+                    p {
+                        margin: 0 0 15px;
+                    }
+                    .read_more {
+                        text-transform: lowercase;
+                        font-weight: 700;
+                        font-size: 13px;
+                        transition: color 0.2s linear;
+                        color: #222222;
+                        .stm_icon {
+                            margin: 2px 0 0 5px;
+                            font-size: 12px;
+                            vertical-align: middle;
+                            color: $stm_third_color;
+                        }
+                        span {
+                            vertical-align: middle;
+                            line-height: 13px;
+                            color: $stm_secondary_color;
+                        }
+                        &:hover {
+                            color: $stm_secondary_color;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        &.short-view {
+            ul {
+                li {
+                    margin-bottom: 35px;
+                    .staff_department {
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+                    p, .read_more {
+                        display: none;
+                    }
+                }
+                .staff_custom_link {
+                    a {
+                        display: table;
+                        width: 100%;
+                        min-height: 180px;
+                        text-decoration: none;
+                        line-height: 24px;
+                        @include transition();
+                        letter-spacing: -0.40px;
+                        background-color: #f2f2f2;
+                        border: 3px solid #f2f2f2;
+                        font-family: Roboto Slab;
+                        font-size: 14px;
+                        color: #777777;
+                        span {
+                            display: table-cell;
+                            vertical-align: middle;
+                            padding: 15px;
+                            text-align: center;
+                            .staff_custom_link_title {
+                                display: block;
+                                padding: 0;
+                                font-size: 20px;
+                                font-weight: 700;
+                                color: $stm_base_color;
+                            }
+                        }
+                        &:hover {
+                            background: #ffffff;
+                            border-color: $stm_third_color;
+                            color: #222222;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.staff_carousel_container {
+    .staff_carousel-box {
+        margin: 0 -15px;
+    }
+    position: relative;
+    .staff_carousel_arrows {
+        position: absolute;
+        top: -72px;
+        right: 0;
+        .slick_prev, .slick_next {
+            top: 0;
+            right: 0;
+        }
+        .slick_prev {
+            left: -95px;
+        }
+    }
+    .staff_carousel_item {
+        padding: 0 15px;
+        .staff_image {
+            img {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .staff_info {
+            h5 {
+                margin-bottom: 0;
+                a {
+                    color: $stm_base_color;
+                }
+            }
+        }
+    }
+}
+
+.staff_list {
+    &.team {
+        ul {
+            margin: 0 -15px;
+            font-size: 0;
+            li {
+                display: inline-block;
+                vertical-align: top;
+                width: 25%;
+                border: none;
+                margin: 0 0 47px;
+                padding: 0 15px;
+                font-size: 13px;
+                .inner_box {
+                    text-align: center;
+                    a {
+                        text-decoration: none !important;
+                    }
+                    .staff_image {
+                        position: relative;
+                        display: inline-block;
+                        float: none;
+                        margin: 0 0 5px;
+                        img {
+                            margin: 0 auto;
+                            border-radius: 50%;
+                        }
+                        .staff_linkedin {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 55px;
+                            height: 55px;
+                            background-color: $stm_third_color;
+                            border-radius: 50%;
+                            i {
+                                font-size: 18px;
+                                color: #fff;
+                                line-height: 55px;
+                            }
+                        }
+                    }
+                    h4 {
+                        font-size: 24px;
+                        line-height: 24px;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.staff_list {
+    &.advisors {
+        ul {
+            margin: 0 -15px;
+            font-size: 0;
+            li {
+                display: inline-block;
+                vertical-align: top;
+                width: 33.33%;
+                border: none;
+                margin: 0 0 47px;
+                padding: 0 15px;
+                font-size: 13px;
+                .staff_image {
+                    position: relative;
+                    margin: 0 15px 0 0;
+                    img {
+                        position: relative;
+                        top: -13px;
+                        margin: 0 auto;
+                        border-radius: 50%;
+                    }
+                    .staff_linkedin {
+                        position: absolute;
+                        top: -13px;
+                        right: 0;
+                        width: 38px;
+                        height: 38px;
+                        background-color: $stm_third_color;
+                        border-radius: 50%;
+                        text-align: center;
+                        i {
+                            font-size: 12px;
+                            color: #fff;
+                            line-height: 38px;
+                        }
+                    }
+                }
+                .inner_box {
+                    .inner {
+
+                    }
+                    a {
+                        text-decoration: none !important;
+                    }
+                    h4 {
+                        padding: 0;
+                        margin: 15px 0 15px;
+                        font-size: 18px;
+                        line-height: 24px;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .staff_list.team ul li {
+        width: 50%;
+    }
+    .staff_list.advisors ul li {
+        width: 50%;
+        .inner_box {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .staff_list.team ul li {
+        width: 100%;
+    }
+    .staff_list.advisors ul li {
+        width: 100%;
+        .staff_image {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}

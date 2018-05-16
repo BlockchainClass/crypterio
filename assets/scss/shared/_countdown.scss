@@ -1,0 +1,190 @@
+.stm_ico_countdown {
+    .countdown_box {
+        text-align: center;
+        .flip-clock-wrapper {
+            display: inline-block;
+            text-align: left;
+            font-size: 0;
+            width: auto;
+            .flip {
+                overflow: hidden;
+                &:nth-of-type(even) {
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    .inn {
+                        letter-spacing: 4px;
+                    }
+                }
+                &:nth-of-type(odd) {
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                    .inn {
+                        letter-spacing: -4px;
+                    }
+                }
+            }
+        }
+    }
+    .flip {
+        margin: 0;
+    }
+    .flip-clock-divider {
+        width: 8px;
+        .flip-clock-dot {
+            display: none;
+        }
+        .flip-clock-label {
+            display: block;
+            top: auto;
+            bottom: -5px;
+            width: 70px;
+            font-size: 14px;
+            opacity: .5;
+            color: #fff;
+        }
+        &.hours {
+            .flip-clock-label {
+                right: -83px;
+            }
+        }
+        &.minutes {
+            .flip-clock-label {
+                right: -77px;
+            }
+        }
+        &.seconds {
+            .flip-clock-label {
+                right: -76px;
+            }
+        }
+    }
+    .flip-clock-wrapper {
+        margin: 0;
+        ul {
+            border-radius: 0;
+            width: 33px;
+            height: 70px;
+            padding: 0;
+            li {
+                line-height: 70px;
+                a {
+                    div {
+                        &.down {
+                            border-radius: 0;
+                        }
+                        &.up {
+                            &:after {
+                                top: 34px;
+                                opacity: .5;
+                            }
+                            .inn {
+                                background-color: #f2f2f2;
+                            }
+                        }
+                        div.inn {
+                            border-radius: 0;
+                            font-size: 42px;
+                            font-weight: 400;
+                            background-color: #fff;
+                            color: #000;
+                            text-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stm_ico_countdown {
+    &__popup,
+    &__popup_overlay {
+        opacity: 0;
+        visibility: hidden;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__popup {
+        position: fixed;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        max-width: 600px;
+        width: 100%;
+        left: 50%;
+        text-align: center;
+        z-index: 999999999;
+        transition: .3s ease;
+        .stm_ico_countdown__button_copy {
+            background-color: transparent;
+            border: 2px solid #0048a8;
+            color: #000000 !important;
+            line-height: 46px;
+            &:hover {
+                background-color: #0048a8;
+                color: #fff !important;
+            }
+        }
+        &_inner {
+            padding: 50px 50px 60px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        &_overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #000;
+            opacity: .5 !important;
+            z-index: 99999999;
+        }
+        &_title {
+            color: #000;
+            font-size: 30px;
+        }
+        &_address {
+            margin-bottom: 20px;
+            color: #595959;
+            font-size: 18px;
+        }
+        &_desc {
+            margin-bottom: 30px;
+            font-size: 13px;
+            line-height: 20px;
+            color: #808080;
+        }
+        &_close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 7px;
+                width: 1px;
+                height: 23px;
+                background-color: #bfbfbf;
+                transform-origin: top left;
+                transform: rotate(-45deg);
+            }
+            &:after {
+                left: auto;
+                right: 0;
+                transform-origin: top right;
+                transform: rotate(45deg);
+            }
+        }
+        .row {
+            padding: 0 10%;
+        }
+    }
+}

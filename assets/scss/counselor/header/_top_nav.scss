@@ -1,0 +1,80 @@
+.stm-navigation {
+    a {
+        @include transition();
+    }
+}
+
+/*Mega Menu*/
+html body.site_counselor {
+    .stm-navigation__default ul {
+        li.stm_megamenu {
+            img {
+                margin-top: 0;
+            }
+            > ul.sub-menu {
+                top: 47px !important;
+                left: -15px !important;
+                width: 100%;
+                &:last-child {
+                    left: -15px !important;
+                }
+                > li {
+                    > a {
+                        color: $stm_base_color;
+                        font-size: 18px;
+                        &:hover {
+                            color: $stm_secondary_color !important;
+                        }
+                    }
+                    &:hover {
+                        > a {
+                            color: $stm_base_color;
+                        }
+                    }
+                    ul.sub-menu {
+                        li {
+                            a {
+                                &:hover {
+                                    color: $stm_secondary_color !important;
+                                }
+                            }
+                        }
+                    }
+                    .stm_megaicon, .fa {
+                        position: relative;
+                        top: 2px;
+                        color: $stm_secondary_color;
+                    }
+
+                    .megamenu-contacts {
+                        margin-top: -3px;
+                        td {
+                            vertical-align: top;
+                            padding-bottom: 12px;
+
+                            .stm_megaicon, .fa {
+                                margin-top: 3px;
+                            }
+
+                            a {
+                                display: inline !important;
+                                padding: 0 !important;
+                                color: rgba(#333333, 0.90) !important;
+                                text-decoration: underline !important;
+                                &:hover {
+                                    text-decoration: none !important;
+                                    color: #333333 !important;
+                                }
+                            }
+                        }
+                        tr:last-child {
+                            td {
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

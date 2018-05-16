@@ -1,0 +1,148 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin stmicon($content) {
+    font-family: 'stm' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: $content;
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $spread $color;
+    -moz-box-shadow: inset $top $left $blur $spread $color;
+    box-shadow: inset $top $left $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+@mixin cleaner() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin fa() {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+@mixin theme_icons() {
+  font-family: 'stm';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin transition( $transition: all, $delay: .3s, $timing: ease ) {
+  -webkit-transition: $transition $delay $timing;
+  -moz-transition: $transition $delay $timing;
+  -ms-transition: $transition $delay $timing;
+  -o-transition: $transition $delay $timing;
+  transition: $transition $delay $timing;
+}
+
+@keyframes stm_zoom {
+    0% {
+        transform: scale(1);
+        opacity: .6
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0
+    }
+}
+
+@keyframes stm_zoom_big {
+    0% {
+        transform: scale(0);
+        opacity: 1
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0
+    }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin breakpoint($point) {
+    @if $point == laptop {
+        @media (max-width: 1440px) { @content ; }
+    }
+    @else if $point == underLaptop {
+        @media (min-width: 1500px) { @content ; }
+    }
+    @else if $point == afterLaptop {
+        @media (max-width: 1500px) { @content ; }
+    }
+    @else if $point == tablet {
+        @media (max-width: 1024px) { @content ; }
+    }
+    @else if $point == tabletland {
+        @media (max-width: 1025px) and (min-width: 992px)  { @content ; }
+    }
+    @else if $point == tabletunder {
+        @media (max-width: 1023px) { @content ; }
+    }
+    @else if $point == tabletonly {
+        @media (max-width: 769px) { @content ; }
+    }
+    @else if $point == mobile {
+        @media (max-width: 550px)  { @content ; }
+    }
+    @else if $point == tabletized {
+        @media (max-width: 769px) and (min-width: 425px)  { @content ; }
+    }
+    @else if $point == mobilized {
+        @media (max-width: 425px) { @content ; }
+    }
+    @else if $point == iphone5portrait {
+        @media (max-width: 570px) and (min-width: 551px)  { @content ; }
+    }
+    @else {
+        @media (max-width: $point) { @content ; }
+    }
+}
+
+@mixin pseudo() {
+    content: '';
+    display: block;
+}
+
+@mixin absoluted() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

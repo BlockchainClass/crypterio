@@ -1,0 +1,57 @@
+.stm-navigation {
+    a {
+        @include transition();
+    }
+}
+
+/*Mega Menu*/
+html body ul {
+    li.stm_megamenu {
+        > ul.sub-menu {
+            > li {
+                > a {
+                    color: $stm_base_color;
+                    &:hover {
+                        color: $stm_secondary_color !important;
+                    }
+                }
+                &:hover {
+                    > a {
+                        color: $stm_base_color;
+                    }
+                }
+                .stm_megaicon, .fa {
+                    color: $stm_secondary_color;
+                }
+
+                .megamenu-contacts {
+                    margin-top: -3px;
+                    td {
+                        vertical-align: top;
+                        padding-bottom: 12px;
+
+                        .stm_megaicon, .fa {
+                            margin-top: 3px;
+                        }
+
+                        a {
+                            display: inline !important;
+                            padding: 0 !important;
+                            color: rgba(#333333, 0.90) !important;
+                            text-decoration: underline !important;
+                            &:hover {
+                                text-decoration: none !important;
+                                color: #333333 !important;
+                            }
+                        }
+                    }
+                    tr:last-child {
+                        td {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,231 @@
+.stm_ico_countdown {
+    position: relative;
+    padding: 40px 30px 20px;
+    background-color: $stm_base_color;
+    border-radius: 9px;
+    max-width: 500px;
+    & > * {
+        position: relative;
+        z-index: 20;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-size: cover;
+        background-position: 50% 0;
+        opacity: .25;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+        }
+    }
+    &__title {
+        padding: 0 0 30px;
+        margin-bottom: 0;
+    }
+    &__button {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 0 30px;
+        color: #fff !important;
+        text-transform: uppercase;
+        background-color: $stm_third_color;
+        font-family: "Roboto Slab";
+        text-align: center;
+        padding: 0 15px;
+        border-radius: 24px;
+        font-size: 14px;
+        text-decoration: none !important;
+        @include transition();
+        &:hover {
+            background-color: $stm_secondary_color;
+        }
+    }
+    &__prices {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 28px;
+        justify-content: space-between;
+        .stm_ico_countdown__price {
+            h4 {
+                padding: 0;
+                margin: 0 0 8px;
+                font-size: 30px;
+                line-height: 1;
+            }
+            span {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                color: #808080;
+            }
+        }
+    }
+    &__progress {
+        .inner {
+            position: relative;
+            padding: 30px 0;
+        }
+        &_bar {
+            position: relative;
+            height: 15px;
+            background: rgba(255,255,255,0.25);
+            border-radius: 7px;
+            overflow: hidden;
+            .stm_ico_countdown__progress_completed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background-color: $stm_secondary_color;
+            }
+        }
+    }
+    &__progress_holder {
+        height: 30px;
+    }
+    &__softcap,
+    &__hardcap {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        text-align: right;
+        height: 60px;
+        color: #fff;
+        &_label {
+            font-size: 14px;
+        }
+        &_label_2 {
+            font-size: 12px;
+        }
+    }
+    &__softcap {
+        right: auto;
+        left: 0;
+        text-align: left;
+        &_label {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 26px;
+                left: 0;
+                height: 22px;
+                width: 1px;
+                background-color: #fff;
+                z-index: 20;
+            }
+        }
+        &_label_2 {
+            position: relative;
+            left: -25px;
+            span {
+                color: #808080;
+            }
+        }
+    }
+}
+
+
+/*Countdown*/
+.stm_ico_countdown {
+    .countdown_box {
+        margin-bottom: 30px;
+        .stm_countdown {
+            float: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            justify-content: space-between;
+            .count-box {
+                position: relative;
+                float: none;
+                width: 65px;
+                min-width: auto;
+                margin: 0 0 40px;
+                border: 0;
+                background-color: #fff;
+                border-radius: 6px;
+                &:after,
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #b5b5b5;
+                    z-index: 1;
+                }
+                & > * {
+                    z-index: 10;
+                }
+                &:after {
+                    background-color: #f2f2f2;
+                    top: 0;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    height: 50%;
+                }
+                .position {
+                    height: 70px;
+                    line-height: 70px;
+                    position: relative;
+                    left: -2px;
+                    &.divs {
+                        left: 3px;
+                    }
+                    .digit {
+                        font-size: 42px;
+                        color: #000;
+                    }
+                }
+            }
+            .countdown_label {
+                position: absolute;
+                width: 100%;
+                bottom: -34px;
+                left: 0;
+                border-top: 0;
+                opacity: .5;
+                color: #fff;
+            }
+        }
+    }
+    &__payments {
+        display: flex;
+        margin: 20px 0 0;
+        justify-content: space-between;
+        .stm_ico_countdown__payment {
+            display: block;
+            padding: 2px 1px;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            background: rgba(0,0,0,0.5);
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .stm_ico_countdown .countdown_box .stm_countdown .count-box {
+        width: 50px;
+        .position {
+            width: 20px;
+            .digit {
+                font-size: 31px;
+            }
+        }
+    }
+}

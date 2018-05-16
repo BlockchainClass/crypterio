@@ -1,0 +1,23 @@
+{
+    "0": false,
+    "custom_css_post_id": -1,
+    "site_skin": "skin_default",
+    "site_skin_base_color": "#261100",
+    "site_skin_secondary_color": "#ff3026",
+    "site_skin_third_color": "#ffc40c",
+    "secondary_font_family": "Mukta Malar",
+    "p_line_height": "30",
+    "h1_font_size": "54",
+    "h1_font_weight": "800",
+    "h1_text_transform": "none",
+    "crypto": "Bitcoin, Ethereum, Ripple, CoinDash, Bitcoin Cash, Zcash",
+    "h5_letter_spacing": "0",
+    "h2_letter_spacing": "0",
+    "h4_font_weight": "600",
+    "footer_style": "style_2",
+    "footer_copyright": "",
+    "footer_sidebar_count": "3",
+    "footer_text": "",
+    "enable_preloader": false,
+    "body_font_family": "Open Sans"
+}

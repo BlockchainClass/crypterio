@@ -1,0 +1,87 @@
+@import "vcw";
+
+.stm_crypto_converter {
+    padding: 40px 25px;
+    background-color: $stm_third_color;
+    h3 {
+        font-size: 30px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .vcw.vcw-converter {
+        padding: 0 !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+        .vcw-input {
+            .vcw-currency {
+                font-family: inherit !important;
+                order: 100 !important;
+                .select2-container.select2-container--default .select2-selection--single {
+                    background-color: #fff;
+                    border: 0;
+                    height: 50px;
+                    border-radius: 5px;
+                    .select2-selection__rendered {
+                        padding-left: 18px;
+                        padding-right: 40px;
+                        line-height: 50px;
+                        text-transform: uppercase;
+                    }
+                    .select2-selection__arrow b {
+                        margin-left: 0;
+                        border: 0;
+                        width: 12px;
+                        height: 7px;
+                        &:before,
+                        &:after {
+                            display: block;
+                            position: absolute;
+                            top: 6px;
+                            left: 0px;
+                            transform: rotate(50deg);
+                            transform-origin: right top;
+                            content: '';
+                            width: 6px;
+                            height: 1px;
+                            background-color: #7d7d7d;
+                        }
+                        &:after {
+                            left: auto;
+                            right: 0;
+                            transform: rotate(-50deg);
+                            transform-origin: left top;
+                        }
+                    }
+                }
+            }
+            .vcw-value {
+                input {
+                    background-color: #fff !important;
+                    border: 0 !important;
+                    height: 50px;
+                    text-align: left !important;
+                }
+            }
+            > * {
+                padding: 0 10px;
+                width: 50% !important;
+            }
+        }
+    }
+}
+
+.stm_crypto_converter {
+    .select2.select2-container--open {
+        &.select2-container--below {
+            .select2-selection--single {
+                border-bottom-right-radius: 0 !important;
+                border-bottom-left-radius: 0 !important;
+            }
+        }
+    }
+}
+
+.select2-dropdown {
+    min-width: 200px;
+    border-top: 1px solid #cacaca !important;
+}

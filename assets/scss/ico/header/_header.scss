@@ -1,0 +1,91 @@
+#header {
+    position: relative;
+    z-index: 99999;
+}
+
+@import "header_top";
+@import "top_bar";
+@import "top_nav";
+@import "title_box";
+
+body {
+    &.header_transparent {
+        #header {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.stm-header {
+    .stm-dropdown_style_1 {
+        font-family: "Roboto Slab";
+        .dropdown-toggle {
+            padding: 3px 21px;
+            background-color: transparent !important;
+            border: 2px solid $stm_third_color;
+            border-radius: 18px;
+            font-size: 12px;
+            &:after {
+                display: none;
+            }
+        }
+        .open {
+            .dropdown-toggle {
+                border-bottom: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+        .dropdown-list {
+            padding: 0;
+            background-color: transparent !important;
+            border: 2px solid $stm_third_color;
+            border-top: 0;
+            border-bottom-right-radius: 18px;
+            border-bottom-left-radius: 18px;
+            overflow: hidden;
+            .stm-switcher__option {
+                padding: 5px 10px;
+                text-align: center;
+                text-decoration: none !important;
+                &:hover {
+                    background-color: $stm_third_color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    #header .stm-header {
+        background-color: $stm_base_color;
+        .stm-header__cell {
+            margin-bottom: 5px;
+        }
+    }
+    body {
+        .stm_currencies_simple_list {
+            .scsl__single {
+                width: 100%;
+                .inner {
+                    border: 0 !important;
+                }
+            }
+        }
+    }
+    .dropdown-toggle {
+        text-align: center;
+    }
+    .stm-header .stm-dropdown_style_1 .dropdown-list {
+        background-color: $stm_base_color !important;
+    }
+}
+
+.stm-header__hb .stm-navigation__default>ul>li>a {
+    &:hover {
+        color: $stm_secondary_color !important;
+    }
+}

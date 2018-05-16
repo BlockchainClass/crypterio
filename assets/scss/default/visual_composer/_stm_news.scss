@@ -1,0 +1,111 @@
+.stm_news {
+    position: relative;
+    .news_list {
+        list-style: none;
+        padding: 0;
+        margin: 0 -15px;
+        font-size: 0;
+        .post_inner {
+            background-color: #fff;
+            .stm_news_unit-block {
+                padding: 30px;
+            }
+            a:hover {
+                &:before {
+                    opacity: 0.5;
+                }
+            }
+        }
+        &.posts_per_row_3 {
+            li {
+                width: 33%;
+            }
+        }
+        &.posts_per_row_2 {
+            li {
+                width: 50%;
+            }
+        }
+        &.posts_per_row_1 {
+            li {
+                width: 100%;
+            }
+        }
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 25%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+            font-size: 13px;
+            .image {
+                img {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(#000, .6);
+                        @include transition();
+                        opacity: 0;
+                        z-index: 100;
+                    }
+                    &:after {
+                        content: "\e920";
+                        @include theme_icons();
+                        @include transition();
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        margin: -15px 0 0 -15px;
+                        color: #fff;
+                        font-size: 30px;
+                        opacity: 0;
+                        z-index: 150;
+                    }
+                    &:hover {
+                        &:before, &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            h5 {
+                margin-bottom: 0;
+                padding-top: 0;
+                font-size: 20px;
+                line-height: 24px;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 47px;
+                    height: 5px;
+                    background: $stm_third_color;
+                    margin: 0 0 20px;
+                }
+                a {
+                    color: $stm_base_color;
+                    @include transition();
+                    &:hover {
+                        color: $stm_third_color;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .date {
+                position: relative;
+                margin-bottom: 15px;
+                font-size: 13px;
+            }
+        }
+    }
+}

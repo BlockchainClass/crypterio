@@ -1,0 +1,160 @@
+@import "variables";
+@import "mixins";
+
+.stm_pricing-table {
+    position: relative;
+    padding: 30px 5px;
+    padding-bottom: 50px !important;
+    height: 100%;
+    margin: 0 0 20px !important;
+    border: 3px solid transparent;
+    text-align: center;
+    background-color: #000000;
+    transition: .3s ease;
+    &:hover {
+        transform: translateY(-10px);
+    }
+    &.has-label {
+        background-color: #000000;
+        border-color: #404040;
+        .stm_pricing-table__footer {
+            .vc_btn3 {
+                background-color: #3baae2 !important;
+                &:hover {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+    .stm_pricing-table {
+
+        &__inner {
+            display: inline-block;
+            text-align: left;
+        }
+
+        &__head {
+            margin: 0 0 23px 0;
+            h5{
+                padding: 0 20px 0 0;
+                text-transform: none;
+                margin-bottom: 29px;
+                color: #fff;
+                &:before {
+                    margin-bottom: 18px;
+                }
+            }
+        }
+        &__pricing {
+            font-size: 40px;
+            line-height: 1;
+            padding: 0 20px;
+            > * {
+                color: #fff;
+            }
+        }
+        &__price {
+            font-weight: 700;
+        }
+        &__postfix,
+        &__separator {
+            font-weight: 300;
+        }
+        &__separator {
+            font-size: 36px;
+        }
+        &__content {
+            padding: 0 20px;
+            ol,ul {
+                padding: 0;
+                margin: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            ul {
+                list-style: none;
+                li {
+                    position: relative;
+                    padding-left: 26px;
+                    margin: 0 0 7px 0;
+                    &:before {
+                        content: "\f00c";
+                        position: absolute;
+                        left: 0;
+                        top: 3px;
+                        display: inline-block;
+                        color: #38e569;
+                        @include fa();
+                    }
+                }
+            }
+        }
+        &__footer {
+            margin: 32px 0 0 0;
+            padding: 0 20px;
+            .vc_btn3 {
+                position: absolute;
+                top: auto;
+                bottom: 30px;
+                left: 30px;
+                background-color: transparent !important;
+                border-color: #3baae2 !important;
+                color: #fff !important;
+                i {
+                    color: #38e569 !important;
+                }
+                &:hover {
+                    background-color: #3baae2 !important;
+                }
+            }
+        }
+        &__label {
+            position: absolute;
+            top: -13px;
+            right: -16px;
+            background-color: #38e569;
+            color: #000;
+            font-style: italic;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1;
+            padding: 10px 13px;
+
+        }
+        @include breakpoint(1340px) {
+            padding: 15px;
+            &__inner {
+                display: block;
+            }
+            &__content,
+            &__footer,
+            &__pricing {
+                padding: 0;
+            }
+        }
+    }
+    .has-label {
+
+    }
+}
+
+.vc_col-sm-3.wpb_column .stm_pricing-table__pricing {
+    font-size: 35px;
+}
+
+.vc_col-md-3.wpb_column .stm_pricing-table__pricing,
+.vc_col-md-3.wpb_column .stm_pricing-table__content,
+.vc_col-md-3.wpb_column .stm_pricing-table__footer {
+    padding: 0;
+}
+
+.vc_col-md-3 .stm_pricing-table {
+    padding: 30px 15px;
+}
+
+.vc_row-o-equal-height {
+    .wpb_wrapper {
+        height: 100%;
+    }
+}

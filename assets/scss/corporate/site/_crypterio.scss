@@ -1,0 +1,166 @@
+.stm_crypto_chart {
+    &__legend {
+        display: none;
+    }
+}
+
+.pcw-box {
+    font-family: "Montserrat" !important;
+    .pcw-arrow-drop,
+    .pcw-arrow-rise {
+        font-family: 'stm' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        transform: rotate(90deg);
+        font-size: 28px !important;
+        color: #38e569;
+        &:before {
+            content: "\e94e" !important;
+        }
+    }
+    .pcw-arrow-drop {
+        color: red;
+        transform: rotate(-90deg);
+    }
+    &.pcw-header .pcw-field-FROMSYMBOL {
+        font-weight: 500 !important;
+    }
+    &.pcw-header .pcw-field-NAME {
+        color: #999 !important;
+    }
+    .pcw-content {
+        padding-top: 15px !important;
+    }
+}
+
+.pcw .pcw-rise, .pcw .fa-arrow-up {
+    color: #38e569;
+}
+
+.pcw.pcw-table.pcw-basic {
+    table {
+        border: 0;
+        thead {
+            tr {
+                background-color: $stm_third_color;
+                th {
+                    font-family: "Montserrat" !important;
+                    font-weight: 400;
+                    &:first-child {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:first-child {
+                    td {
+                        border: 0;
+                    }
+                }
+            }
+            .pcw-arrow-drop,
+            .pcw-arrow-rise {
+                font-family: 'stm' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                display: inline-block;
+                transform: rotate(90deg);
+                font-size: 14px !important;
+                color: #38e569;
+                &:before {
+                    content: "\e94e" !important;
+                }
+            }
+            .pcw-arrow-drop {
+                color: red;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+
+.pcw-rise {
+    .pcw-arrow-drop {
+        display: none !important;
+    }
+}
+
+.pcw-drop {
+    .pcw-arrow-rise {
+        display: none !important;
+    }
+}
+
+.pcw-box.pcw-header.pcw-ct-blue .pcw-top-border {
+    background-color: #3baae2 !important;
+}
+
+.vcw.vcw-full-card {
+    border-top: 20px solid #3baae2 !important;
+    border-bottom: dotted 0.0625rem rgba(255,255,255,0.5) !important;
+    color: #fff !important;
+    background-color: transparent !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.vcw.vcw-full-card div {
+    color: #FFFFFF !important;
+}
+
+.vcw.vcw-table{
+    background-color: transparent !important;
+    box-shadow: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+.vcw.vcw-table .vcw-right{
+    text-align: left !important;
+}
+
+.vcw.vcw-table .vcw-symbol{
+    width: 17% !important;
+}
+
+.vcw.vcw-table .vcw-name{
+    width: 19% !important;
+}
+
+.vcw.vcw-table td:first-child, .vcw.vcw-table th:first-child {
+    padding-left: 15px !important;
+}
+
+.vcw.vcw-table thead tr th{
+    color: #ffffff !important;
+    background-color: #3baae2 !important;
+    height: 44px;
+}
+
+.vcw.vcw-table tbody tr td{
+    height: 44px;
+    border-bottom: 1px solid rgba(255,255,255,0.5) !important;
+    background-color: #000000 !important;
+}
+
+.vcw.vcw-table tbody tr:last-child td{
+    border-bottom: 0 !important;
+}
+

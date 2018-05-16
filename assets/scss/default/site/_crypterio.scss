@@ -1,0 +1,43 @@
+.elements_in_row_1 {
+    .stm-header__element {
+        width: 100%;
+    }
+}
+
+.stm_currencies_simple_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 9px 0 0;
+    border-top: 1px solid rgba(255,255,255,.25);
+    .scsl__single {
+        width: 16.6666%;
+        margin: 0 0 10px;
+        .inner {
+            border-left: 1px dashed rgba(255,255,255,.25);
+            padding: 0 9px;
+            .scsl__name {
+                margin-bottom: 5px;
+                font-size: 13px;
+                font-weight: 900;
+                color: #fff;
+            }
+            .scsl__time,
+            .scsl__price {
+                font-size: 13px;
+                color: rgba(255,255,255,.6);
+            }
+        }
+        &:nth-child(6n) {
+            .inner {
+                border-right: 1px dashed rgba(255,255,255,.25);
+            }
+        }
+    }
+    .scsl__change_minus {
+        color: #ff3026;
+    }
+    .scsl__change_plus {
+        color: #13c24e;
+    }
+}
